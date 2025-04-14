@@ -1,3 +1,36 @@
-body {
+@import './blocks/variables';
+@import './blocks/header';
+@import './blocks/menu';
+@import './blocks/about';
+@import './blocks/compare';
+@import './blocks/details';
+@import './blocks/contact';
+@import './blocks/footer';
+
+.page{
+  scroll-behavior: smooth;
+}
+
+.page:has(.page__menu:target) {
+  overflow: hidden;
+}
+
+.page_body {
   margin: 0;
+  background-color: $main-color;
+}
+
+.container{
+  padding: 60px 20px;
+  width: 280px;
+  justify-content: center;
+  margin: 0 auto;
+
+  @media (min-width:744) {
+    width: 600px;
+  }
+
+  @media (min-width:1260) {
+    width: 1020px;
+  }
 }
